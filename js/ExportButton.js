@@ -66,7 +66,12 @@ function exportResume() {
     // @ts-ignore
     const { jsPDF } = window.jspdf;
     const makePDF = (canvas) => {
-        const pdf = new jsPDF("p", "mm", [canvas.width, canvas.height]);
+        console.log(resume.clientWidth, resume.clientHeight);
+        console.log(canvas.width, canvas.height);
+        const pdf = new jsPDF(canvas.width > canvas.height ? "l" : "p", "mm", [
+            canvas.width,
+            canvas.height,
+        ]);
         const imgData = canvas.toDataURL("image/png");
         pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
         pdf.save("resume.pdf");
