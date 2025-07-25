@@ -79,7 +79,7 @@ function Education(edu: IEducation, mostRecent: boolean) {
         dateContainer.append(
             element("img", {
                 class: "heart",
-                attrs: { src: "/heart.svg" },
+                attrs: { src: "./public/heart.svg" },
             })
         );
     const el = element("div", { class: "education" }, [

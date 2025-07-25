@@ -297,9 +297,13 @@ button {
     background-color: rgba(126 115 18 / 0.4);
     color: #ddf163;
     border-radius: 59px;
-    padding: 2px 6px;
+    padding: 0.5em 0.75em;
     font-weight: var(--font-medium);
     font-size: 0.8rem;
+    display: flex;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 #resume .experience .text-container {

@@ -64,7 +64,7 @@ function Education(edu, mostRecent) {
     if (mostRecent)
         dateContainer.append(element("img", {
             class: "heart",
-            attrs: { src: "/heart.svg" },
+            attrs: { src: "./public/heart.svg" },
         }));
     const el = element("div", { class: "education" }, [
         dateContainer,
