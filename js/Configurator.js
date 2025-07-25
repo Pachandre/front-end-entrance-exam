@@ -3,6 +3,7 @@ import Ripple from "./Ripple";
 import { InnerState, LocalStorageState } from "./state";
 import StateTagView from "./TagView";
 import { uuidV4 } from "./utils";
+import EditSVG from "/edit.svg?url";
 function fileToBase64(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -218,7 +219,7 @@ function EditButton(state, id, creator) {
                 });
             },
         },
-    }, [element("img", { attrs: { src: "/edit.svg" } })]));
+    }, [element("img", { attrs: { src: EditSVG } })]));
 }
 const Languages = (state) => Listed("languages", state, () => ({
     id: uuidV4(),

@@ -3,6 +3,7 @@ import Ripple from "./Ripple";
 import State, { InnerState, LocalStorageState } from "./state";
 import StateTagView from "./TagView";
 import { uuidV4 } from "./utils";
+import EditSVG from "/edit.svg?url";
 
 function fileToBase64(file: File): Promise<string> {
     return new Promise((resolve, reject) => {
@@ -263,7 +264,7 @@ function EditButton<T extends Iid>(
                     },
                 },
             },
-            [element("img", { attrs: { src: "/edit.svg" } })]
+            [element("img", { attrs: { src: EditSVG } })]
         )
     );
 }
